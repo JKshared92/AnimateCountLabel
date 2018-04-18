@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AnimateCountLabel_Example' do
+  pod 'AnimateCountLabel', :path => '../'
+
+  target 'AnimateCountLabel_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
