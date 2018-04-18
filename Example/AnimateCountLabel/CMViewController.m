@@ -7,8 +7,12 @@
 //
 
 #import "CMViewController.h"
+#import <AnimateCountLabel/UILabel+AnimateCount.h>
 
 @interface CMViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (nonatomic, assign) BOOL didChange;
 
 @end
 
@@ -24,6 +28,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)clickChange:(id)sender {
+    if (self.didChange) {
+        [self.countLabel changeNumberFrom:@"1000" to:@"-1000" duration:2];
+    }else {
+        [self.countLabel changeNumberFrom:@"-1000" to:@"1000" duration:2];
+    }
+    self.didChange = !self.didChange;
 }
 
 @end
