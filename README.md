@@ -30,6 +30,6 @@ AnimateCountLabel is available under the MIT license. See the LICENSE file for m
 
 ## 功能及使用
 
-* 动画改编label的数值
+* 动画改变label的数值
 * 导入文件
 * 直接用label调用分类方法即可
